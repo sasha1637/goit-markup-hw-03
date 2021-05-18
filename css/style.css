@@ -17,7 +17,7 @@
   --primary-logo-color: rgba(0, 0, 0, 1);
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --border-header-bottom: rgba(236, 236, 236, 1);
-  --footer-background-color: rgba(47, 48, 58, 1);
+  --background-color: rgba(47, 48, 58, 1);
 }
 
 body {
@@ -61,27 +61,29 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
-.section:not(:last-child) {
+.section:not(:first-child) {
   padding-top: 47px;
   padding-bottom: 47px;
 }
+
 .section:last-child {
   padding-top: 47px;
   padding-bottom: 94px;
 }
+
 /* ----------------------------- End  Components ---------------------------- */
 
 /* --------------------------------- Header --------------------------------- */
 /* ---------------------------------- logo ---------------------------------- */
 .header {
   border-bottom: 1px solid var(--border-header-bottom);
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 .nav {
   display: flex;
@@ -98,7 +100,7 @@ img {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 26px;
-  line-height: 1.1928888;
+  line-height: 1.19;
   text-decoration: none;
   margin-right: 93px;
 }
@@ -140,6 +142,12 @@ img {
 
 /* ---------------------------------- Hero ---------------------------------- */
 
+.hero {
+  background-color: var(--background-color);
+  padding-top: 160px;
+  padding-bottom: 235px;
+  text-align: center;
+}
 .hero-main-title {
   color: var(--primary-white-color);
   font-weight: 900;
@@ -149,17 +157,9 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   /* Так можно делать или это полный пипец? */
-  padding-top: 160px;
-
-  margin: 0px 300px 35px 200px;
-}
-.hero {
-  background-color: rgb(31, 22, 22);
+  margin-bottom: 35px;
 }
 /* Button */
-.hero .container {
-  text-align: center;
-}
 .button {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -174,9 +174,6 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
-.hero-button {
-  padding-bottom: 235px;
-}
 .button:focus,
 .button:hover {
   background-color: rgb(24, 140, 232);
@@ -184,16 +181,16 @@ img {
 /* -------------------------------- End hero -------------------------------- */
 
 /* -------------------------------- Advantage ------------------------------- */
-
+.advantage.section {
+  padding-top: 94px;
+}
 .advantage-list {
   display: flex;
   align-items: center;
   margin-left: -30px;
-  margin-top: -30px;
 }
 .advantage-item {
   margin-left: 30px;
-  margin-top: 30px;
   flex-basis: calc((100% - 120px) / 4);
 }
 .advantage-list .title {
@@ -201,7 +198,7 @@ img {
   text-transform: uppercase;
   color: var(--title-text-color);
   font-weight: bold;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .advantage-list .description {
   line-height: 1.71;
@@ -223,7 +220,7 @@ img {
 
 /* -------------------------------- Services -------------------------------- */
 .services-title {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
@@ -234,11 +231,9 @@ img {
   display: flex;
   align-items: center;
   margin-left: -30px;
-  margin-top: -30px;
 }
 .services-item {
   margin-left: 30px;
-  margin-top: 30px;
   flex-basis: calc((100% - 90px) / 3);
 }
 /* ------------------------------ End Services ------------------------------ */
@@ -257,10 +252,11 @@ img {
   align-items: center;
   margin-left: -30px;
   margin-top: -30px;
+  text-align: center;
 }
 .team-item {
-  margin-left: 30px;
   margin-top: 30px;
+  margin-left: 30px;
   flex-basis: calc((100% - 120px) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -270,15 +266,16 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   color: var(--title-text-color);
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 .team-list .profession {
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
+}
+.teamcard {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* -------------------------------- End team -------------------------------- */
@@ -286,17 +283,19 @@ img {
 /* --------------------------------- Footer --------------------------------- */
 /* ---------------------------------- logo ---------------------------------- */
 
+.footer {
+  background-color: var(--background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer .logo {
   color: var(--primary-white-color);
 }
 .footer-logo {
-  padding-top: 60px;
   margin-bottom: 20px;
 }
 /*                                  End logo                                  */
-.footer {
-  background-color: var(--footer-background-color);
-}
 
 .footer-address-list .link {
   line-height: 1.71;
@@ -306,16 +305,11 @@ img {
 .footer-address-list {
   display: flex;
   flex-direction: column;
-  margin-left: -9px;
   margin-top: -9px;
 }
 .footer-item {
-  margin-left: 9px;
   margin-top: 9px;
   flex-basis: calc((100% - 27px) / 3);
-}
-.footer-item:last-child {
-  margin-bottom: 60px;
 }
 .footer-address-list .map {
   color: var(--primary-white-color);
@@ -330,6 +324,10 @@ img {
 
 /* -------------------------------- Portfolio ------------------------------- */
 /* filtr pozition */
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .portfolio-filtr {
   display: flex;
   justify-content: center;
@@ -343,29 +341,26 @@ img {
 }
 /* End filtr pozition */
 
-.portfolio-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .portfolio-filtr .button {
   color: var(--title-text-color);
   background-color: var(--secondary-grey-color);
   font-weight: 500;
   line-height: 1.39;
-  cursor: pointer;
+  padding: 6px 22px;
+  box-shadow: none;
+  border: 0;
 }
 .portfolio-filtr .button:focus,
 .portfolio-filtr .button:hover {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-
-  /* justify-content: space-between; */
-  /* margin-right: -30px;
-  margin-bottom: -30px; */
 }
 .portfolio-item:nth-child(n) {
   margin-right: 30px;
@@ -380,7 +375,6 @@ img {
   font-style: 700;
   font-size: 18px;
   line-height: 1.71;
-  align: left;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
@@ -390,7 +384,6 @@ img {
   line-height: 1.87;
 }
 .portflio-text-position {
-  display:inline-block
   padding: 20px 24px;
 }
 /* --------------------------------End Portfolio ------------------------------- */
