@@ -361,6 +361,7 @@ img {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -30px;
 }
 .portfolio-item:nth-child(n) {
   margin-right: 30px;
