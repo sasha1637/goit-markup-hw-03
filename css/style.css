@@ -61,13 +61,8 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
-.section:not(:first-child) {
-  padding-top: 47px;
-  padding-bottom: 47px;
-}
-
-.section:last-child {
-  padding-top: 47px;
+.section {
+  padding-top: 94px;
   padding-bottom: 94px;
 }
 
@@ -144,8 +139,8 @@ img {
 
 .hero {
   background-color: var(--background-color);
-  padding-top: 160px;
-  padding-bottom: 235px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
 }
 .hero-main-title {
@@ -181,8 +176,9 @@ img {
 /* -------------------------------- End hero -------------------------------- */
 
 /* -------------------------------- Advantage ------------------------------- */
-.advantage.section {
-  padding-top: 94px;
+.advantage {
+  padding-bottom: 0;
+  padding-bottom: 47px;
 }
 .advantage-list {
   display: flex;
@@ -219,6 +215,10 @@ img {
 /* ------------------------------ End Advantage ----------------------------- */
 
 /* -------------------------------- Services -------------------------------- */
+.services {
+  padding-top: 0;
+  padding-top: 47px;
+}
 .services-title {
   margin-bottom: 50px;
   font-weight: bold;
@@ -324,10 +324,6 @@ img {
 
 /* -------------------------------- Portfolio ------------------------------- */
 /* filtr pozition */
-.portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .portfolio-filtr {
   display: flex;
   justify-content: center;
@@ -337,7 +333,7 @@ img {
   margin-right: 8px;
 }
 .filtr-item:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 /* End filtr pozition */
 
@@ -368,7 +364,7 @@ img {
   margin-bottom: 30px;
 }
 .portfolio-item:nth-child(3n) {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .portfolio-list .portfolio-title {
@@ -386,5 +382,7 @@ img {
 }
 .portflio-text-position {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
 }
 /* --------------------------------End Portfolio ------------------------------- */
