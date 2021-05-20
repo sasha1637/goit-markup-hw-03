@@ -239,6 +239,9 @@ img {
 /* ------------------------------ End Services ------------------------------ */
 
 /* ---------------------------------- Team ---------------------------------- */
+.team {
+  background-color: var(--secondary-grey-color);
+}
 .team-title {
   font-weight: bold;
   font-size: 36px;
@@ -276,6 +279,7 @@ img {
 .teamcard {
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: var(--primary-white-color);
 }
 
 /* -------------------------------- End team -------------------------------- */
@@ -296,7 +300,6 @@ img {
   margin-bottom: 20px;
 }
 /*                                  End logo                                  */
-
 .footer-address-list .link {
   line-height: 1.71;
   color: var(--footer-contacts-color);
@@ -305,11 +308,9 @@ img {
 .footer-address-list {
   display: flex;
   flex-direction: column;
-  margin-top: -9px;
 }
-.footer-item {
-  margin-top: 9px;
-  flex-basis: calc((100% - 27px) / 3);
+.footer-item:not(:last-child) {
+  margin-bottom: 8px;
 }
 .footer-address-list .map {
   color: var(--primary-white-color);
